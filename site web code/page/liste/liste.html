@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Galerie Circulaire avec Informations</title>
+</head>
+<body style="align-items: center; justify-content: center; display: flex; flex-direction: column;">
+    <div class="circle-gallery">
+        <!-- Ajoutez 17 photos ici avec des descriptions -->
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'mars', 'Description de la photo 1', ['Action 1A', 'Action 1B', 'Action 1C'])">
+            <img src="../image/marsjpg.jpeg" alt="Photo 1">
+        </div>
+        <div class="photo-container " style="justify-content: right;" onclick="openMenu('https://via.placeholder.com/300', 'jupiter', 'Description de la photo 2', ['Action 2A', 'Action 2B', 'Action 2C'])">
+            <img src="../image/jupiter.png" alt="Photo 2">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'ceci esty un test ', 'ceci est un test de photos', ['Action 3A', 'Action 3B', 'Action 3C'])">
+            <img src="https://th.bing.com/th/id/OIP.usxe4GOgapLm2KdnpaMLCwHaHa?w=204&h=204&c=7&r=0&o=5&pid=1.7" alt="Photo 3">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 4', 'Description de la photo 4', ['Action 4A', 'Action 4B', 'Action 4C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 4">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 5', 'Description de la photo 5', ['Action 5A', 'Action 5B', 'Action 5C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 5">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 6', 'Description de la photo 6', ['Action 6A', 'Action 6B', 'Action 6C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 6">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 7', 'Description de la photo 7', ['Action 7A', 'Action 7B', 'Action 7C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 7">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 8', 'Description de la photo 8', ['Action 8A', 'Action 8B', 'Action 8C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 8">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 9', 'Description de la photo 9', ['Action 9A', 'Action 9B', 'Action 9C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 9">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 10', 'Description de la photo 10', ['Action 10A', 'Action 10B', 'Action 10C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 10">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 11', 'Description de la photo 11', ['Action 11A', 'Action 11B', 'Action 11C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 11">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 12', 'Description de la photo 12', ['Action 12A', 'Action 12B', 'Action 12C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 12">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 13', 'Description de la photo 13', ['Action 13A', 'Action 13B', 'Action 13C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 13">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 14', 'Description de la photo 14', ['Action 14A', 'Action 14B', 'Action 14C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 14">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 15', 'Description de la photo 15', ['Action 15A', 'Action 15B', 'Action 15C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 15">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 16', 'Description de la photo 16', ['Action 16A', 'Action 16B', 'Action 16C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 16">
+        </div>
+        <div class="photo-container" onclick="openMenu('https://via.placeholder.com/300', 'Photo 17', 'Description de la photo 17', ['Action 17A', 'Action 17B', 'Action 17C'])">
+            <img src="https://via.placeholder.com/150" alt="Photo 17">
+        </div>
+    </div>
+
+    <div class="menu" id="menu">
+        <div class="menu-content">
+            <img id="large-photo" src="" alt="Photo Agrandie">
+            <div id="menu-items">
+                <h3 id="menu-title"></h3>
+                <p id="menu-description"></p>
+                <ul id="menu-actions"></ul>
+                <button onclick="closeMenu()">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
