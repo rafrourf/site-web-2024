@@ -31,7 +31,7 @@ main {
 
 section {
     margin-bottom: 20px;
-    color: white
+    color: white;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -104,6 +104,17 @@ li {
 .photo-container:nth-child(16) { top: 50%; left: 50%; } /* Centre */
 .photo-container:nth-child(17) { top: 50%; left: 50%; } /* Centre */
 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ 
 nav {
     background-color: #444;
     color: #fff;
@@ -150,5 +161,29 @@ nav a:hover::before {
 nav a:hover {
     background-color: #555;
     color: #ffd700;
+}
+ 
+main {
+    padding: 2rem;
+    animation: fadeIn 1s ease;
+}
+ 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+ 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
  
