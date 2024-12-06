@@ -89,3 +89,18 @@ footer {
     
 }
 
+.button {
+    display: inline-block;
+    background-color: #337AFF; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+    margin-top: 10px; /* Espace au-dessus du bouton */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
