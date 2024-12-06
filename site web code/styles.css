@@ -103,3 +103,52 @@ li {
 .photo-container:nth-child(15) { top: 50%; left: 50%; } /* Centre */
 .photo-container:nth-child(16) { top: 50%; left: 50%; } /* Centre */
 .photo-container:nth-child(17) { top: 50%; left: 50%; } /* Centre */
+
+nav {
+    background-color: #444;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+ 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+ 
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    font-size: 1.1rem;
+}
+ 
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+ 
+nav a:hover::before {
+    width: 100%;
+    left: 0;
+}
+ 
+nav a:hover {
+    background-color: #555;
+    color: #ffd700;
+}
+ 
