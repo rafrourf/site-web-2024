@@ -104,7 +104,7 @@ a {
     ); /* Forme d'étoile */
     transform: rotate(360deg); /* Rotation au survol */
     background-color: yellow; /* Couleur de fond de l'étoile */
-    color: black; /* Couleur du texte au survol (facultatif) */
+    color: black; /* Couleur du texte au survol */
 }
 .button2 {
     display: inline-block;
@@ -124,4 +124,13 @@ a {
 .button2:hover {
     border-radius: 50%; /* Transforme l'ovale en cercle */
     background-color: green; /* Change la couleur de fond au survol */
+}
+
+.content {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
 }

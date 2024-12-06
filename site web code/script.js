@@ -17,3 +17,20 @@ function openMenu(photoUrl, title, description, actions) {
 function closeMenu() {
     document.getElementById('menu').style.display = 'none';
 }
+
+document.getElementById('goToPage2')?.addEventListener('click', function() {
+    transitionToPage('page2.html');
+});
+
+document.getElementById('goToPage1')?.addEventListener('click', function() {
+    transitionToPage('page1.html');
+});
+
+function transitionToPage(page) {
+    const content = document.querySelector('.content');
+    content.classList.add('fade-out');
+
+    setTimeout(() => {
+        window.location.href = page;
+    }, 500); // Doit correspond à la durée de la transition CSS
+}
