@@ -1,103 +1,10 @@
-@font-face {
-    font-family: 'test'; 
-    src: url('font/HvDTrial_Brandon_Grotesque_medium-BF64a625c84a521.otf'); /* Ajout du point-virgule */
-    font-weight: bold; /* Correction de la faute de frappe */
-    font-style: normal; 
-}
-
-h1 {
-	font-family: 'test';
-	margin: 0;
-	padding: 0;
-}
-
-h2 { /* Utilisation de h1 et h2 pour les titres */
-    font-family: 'Espace'; /* Ajout de la police Espace ici */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-	color: white;
+    background-color: #f4f4f4;
+}
  
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #0077cc;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-title {
-	font-family: Espace;
-	color: fff200;
-	margin: 0;
-	padding: 0;
-}
-
-li {
-	color: #ffffff; 
-}
-
-.circle-gallery {
-    position: relative;
-    width: 600px; /* Augmentez la taille selon vos besoins */
-    height: 600px; /* Augmentez la taille selon vos besoins */
-    border-radius: 50%;
-    overflow: hidden;
-
-}
-
-.photo-container {
-    position: absolute;
-    width: 100px; /* Largeur de chaque photo */
-    height: 100px; /* Hauteur de chaque photo */
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    flex-direction: right;
-
-}
-
-.photo-container img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; /* Pour rendre les images circulaires */
-}
-
-/* Positionnement des photos en cercle */
-.photo-container:nth-child(1) { top: 50%; left: 50%; transform: translate(-50%, -50%); } /* Centre */
-.photo-container:nth-child(2) { top: 15%; left: 50%; } /* Haut */
-.photo-container:nth-child(3) { top: 30%; left: 80%; } /* Haut-Droit */
-.photo-container:nth-child(4) { top: 50%; left: 100%; } /* Droite */
-.photo-container:nth-child(5) { top: 70%; left: 80%; } /* Bas-Droit */
-.photo-container:nth-child(6) { top: 85%; left: 50%; } /* Bas */
-.photo-container:nth-child(7) { top: 70%; left: 20%; } /* Bas-Gauche */
-.photo-container:nth-child(8) { top: 50%; left: 0; } /* Gauche */
-.photo-container:nth-child(9) { top: 30%; left: 20%; } /* Haut-Gauche */
-.photo-container:nth-child(10) { top: 15%; left: 50%; } /* Haut */
-.photo-container:nth-child(11) { top: 50%; left: 50%; } /* Centre */
-.photo-container:nth-child(12) { top: 50%; left: 50%; } /* Centre */
-.photo-container:nth-child(13) { top: 50%; left: 50%; } /* Centre */
-.photo-container:nth-child(14) { top: 50%; left: 50%; } /* Centre */
-.photo-container:nth-child(15) { top: 50%; left: 50%; } /* Centre */
-.photo-container:nth-child(16) { top: 50%; left: 50%; } /* Centre */
-.photo-container:nth-child(17) { top: 50%; left: 50%; } /* Centre */
-
 header {
     background-color: #333;
     color: #fff;
@@ -179,5 +86,6 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    
 }
- 
+
