@@ -19,12 +19,6 @@ h2 { /* Utilisation de h1 et h2 pour les titres */
  
 }
 
-header {
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
 main {
     padding: 20px;
 }
