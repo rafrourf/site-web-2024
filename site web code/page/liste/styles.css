@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Aligner les éléments en colonne */
+    align-items: center; /* Centrer horizontalement */
+}
+
+h1 {
+    margin-bottom: 20px; /* Espacement entre le titre et le conteneur des planètes */
+}
+
+.planets {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    position: relative;
+    width: 500px; /* Largeur du conteneur des planètes */
+    height: 500px; /* Hauteur du conteneur des planètes */
+    border-radius: 50%; /* Rendre le conteneur circulaire */
+    overflow: hidden; /* Masquer les débordements */
+}
+
+.planet {
+    position: absolute; /* Positionnement absolu pour le placement circulaire */
+    width: 100px; /* Largeur de la planète */
+    height: 100px; /* Hauteur de la planète */
+    border-radius: 50%; /* Rendre les images rondes */
+    overflow: hidden; /* Masquer les débordements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+
+/* Positionnement des petites photos en cercle avec espacement */
+#mercury { top: 10%; left: 50%; transform: translate(-50%, -50%); }
+#venus { top: 30%; left: 80%; transform: translate(-50%, -50%); }
+#earth { top: 50%; left: 90%; transform: translate(-50%, -50%); }
+#mars { top: 70%; left: 80%; transform: translate(-50%, -50%); }
+#jupiter { top: 90%; left: 50%; transform: translate(-50%, -50%); }
+#saturn { top: 70%; left: 20%; transform: translate(-50%, -50%); }
+#uranus { top: 50%; left: 10%; transform: translate(-50%, -50%); }
+#neptune { top: 30%; left: 20%; transform: translate(-50%, -50%); }
+
+.planet img {
+    width: 100%; /* Assurez-vous que les images remplissent leur conteneur */
+    height: auto;
+}
+
+.info-panel {
+    margin-top: 20px; /* Espacement entre le conteneur des planètes et le panneau d'informations */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px; /* Largeur du panneau d'informations */
+    height: auto; /* Ajuster la hauteur automatiquement */
+}

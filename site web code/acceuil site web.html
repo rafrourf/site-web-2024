@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur notre site</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+details {
+            display: inline-block; /* Affiche les panneaux horizontalement */
+            margin-right: 20px; /* Espace entre les panneaux */
+        }
+        summary {
+            cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+        }
+        body {
+            background: linear-gradient(to right, #041576, #337AFF);    
+            background-size: cover;
+            color: #fff; /* Couleur du texte par défaut */
+        }
+    </style>
+</head>
+<body>
+
+<button class="button button1" onclick="window.location.href = 'iss.html';">information sur l'iss</button>
+<button class="button button2" onclick="window.location.href = 'page/liste/liste.html';">planète de notre système solaire</button>
+
+    <section id="planetes">
+        <h2>La liste des planètes de notre système solaire</h2>
+        <p>Liste des planètes de notre système solaire et les informations sur chaque planète.</p>
+    </section>
+
+    <section id="iss">
+        <h2>Live sur l'espace depuis l'ISS</h2>
+        <iframe src="http://www.youtube.com/embed/wG4YaEcNlb0" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="vaisseau">
+        <h2>La liste des vaisseaux les plus connus qui ont volé</h2>
+        <a href="page/liste.html"> 
+            <img src="image/fusée.png" alt="Liens vers la liste des fusées qui ont volé" width="400" height="200">
+        </a>
+        <ul>
+            <li>Voyager 1 - Détails...</li>
+            <li>Appolo 11</li>
+            <li>L ISS</li>
+            <li>Soyuz</li>
+            <li>Ariane 5</li>
+            <li>Space Ship</li>
+        </ul>
+    </section>
+
+    <section id=" infos">
+        <h2>Quelques informations sur lespace</h2>
+        <ul>
+            <li>Définition de lespace </li>
+            <li>Quelle est sa taille ?</li>
+        </ul>
+    </section>
+
+    <section id="issinfo">
+        <h2>quelque information sur l'iss</h2>
+        <a href="page/iss.html">
+            <img src="https://th.bing.com/th/id/OIP.gwO-nlapd1hUvm8jSUsLbgHaE6?w=247&h=180&c=7&r=0&o=5&pid=1.7" alt="quelque informations sur l'iss" width="400" height="200">
+        </a>
+            <ul>
+                <li>quesque veut dire l'anagrame iss</li>
+                <li>a quoi nous sert l'iss</li>
+                <li>a qui appartient l'iss</li>
+                <li>video de présentation de l'intérieur de l'iss</li>
+            </ul>
+    </section>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024-2025 Maxime Rouilly, Mattéo Mayet et Raphael Thys</p>
+    </footer>
+</body>
+</html>

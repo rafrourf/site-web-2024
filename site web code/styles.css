@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+ 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ 
+main {
+    padding: 2rem;
+    animation: fadeIn 1s ease;
+}
+ 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+ 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+button {
+    display: inline-block;
+    background-color: #337AFF; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+    margin-top: 10px; /* Espace au-dessus du bouton */
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+a {
+	color: black
+}
+
+.button {
+	background-color: black;
+	  border: none;
+	  color: white;
+	  padding: 20px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+}
+
+.button1 {
+    display: inline-block;
+    width: 100px; /* Largeur du bouton */
+    height: 100px; /* Hauteur du bouton */
+    background-color: blue; /* Couleur de fond du bouton (initial) */
+    border: none; /* Pas de bordure */
+    border-radius: 50%; /* Forme ronde */
+    color: white; /* Couleur du texte */
+    font-size: 16px; /* Taille du texte */
+    text-align: center; /* Centrer le texte */
+    line-height: 20px; /* Centrer verticalement le texte */
+    position: relative; /* Pour positionner l'animation */
+    transition: clip-path 0.5s ease, transform 0.5s ease, background-color 0.5s ease; /* Transition pour l'animation */
+    cursor: pointer; /* Curseur pointer pour le bouton */
+}
+
+.button1:hover {
+    clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    ); /* Forme d'étoile */
+    transform: rotate(360deg); /* Rotation au survol */
+    background-color: yellow; /* Couleur de fond de l'étoile */
+    color: black; /* Couleur du texte au survol */
+}
+.button2 {
+    display: inline-block;
+    width: 150px; /* Largeur de l'ovale */
+    height: 100px; /* Hauteur de l'ovale */
+    background-color: blue; /* Couleur de fond de l'ovale */
+    color: white; /* Couleur du texte */
+    font-size: 16px; /* Taille du texte */
+    text-align: center; /* Centrer le texte */
+    line-height: 20px; /* Centrer verticalement le texte */
+    border: none; /* Pas de bordure */
+    border-radius: 10px; /* Arrondi pour créer un ovale */
+    transition: border-radius 0.5s ease, background-color 0.5s ease; /* Transition pour l'animation */
+    cursor: pointer; /* Curseur pointer pour le bouton */
+}
+
+.button2:hover {
+    border-radius: 50%; /* Transforme l'ovale en cercle */
+    background-color: green; /* Change la couleur de fond au survol */
+}
+
+.content {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
