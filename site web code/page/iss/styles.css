@@ -1,0 +1,30 @@
+.home-button {
+    position: absolute; /* Positionnement absolu */
+    top: 20px; /* Distance du haut */
+    left: 20px; /* Distance de la gauche */
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 60px; /* Centre le texte verticalement */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 24px;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.home-button:hover .icon {
+    transform: scale(1.5); /* Agrandit l'icône au survol */
+}

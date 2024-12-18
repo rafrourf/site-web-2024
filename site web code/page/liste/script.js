@@ -21,22 +21,21 @@ const planets = {
     },
     jupiter: {
         title: "Jupiter",
-        description: "Jupiter est la plus grande planète du système solaire.",
+        description: "Jupiter est la 5ième il s'agit d'une géante gazeuse (redouverte entièrement d'un gaz) La température sur cette planète est de -148°C. jupiter ne possède pas de surface solide a cause de ce gaz. Elle subit également des perturbation athmosphérique",
         image: "https://3.bp.blogspot.com/-JzB2ruOjBOs/WJy8tR_tJSI/AAAAAAAABdA/26gANOQ4Y4IZyMnEGS2L8X-dvhVhGL0ZQCLcB/s1600/jupiter_HD.jpg"
     },
     saturn: {
         title: "Saturne",
-        description: "Saturne est célèbre pour ses anneaux.",
+        description: "saturne est la deuxième planète la plus grosse de notre systèpme solaire et la sixième planète en partant que soleil. Ils s’agit d’une géante gazeuse car elle est recouverte de gaz. Elle acomplit une révolution en 29ans et 167 jour. La température est de -178°C",
         image: "https://img.freepik.com/premium-photo/saturn-planet-with-night-view-rising-sun-realistic-view-solar-system-3d-rendering_508524-249.jpg?w=2000"
     },
     uranus: {
         title: "Uranus",
-        description: "Uranus est unique car elle tourne sur le côté.",
-        image: "https://www.telescopenerd.com/wp-content/uploads/uranus.png"
+        description: "il s'agit d'une géante de glace, donc elle est entièrement recouverte de glace. Sa température est de -216°C. Pour ces deux raison, ;a possibilité de vivre sur cette planète est impossible.",        image: "https://www.telescopenerd.com/wp-content/uploads/uranus.png"
     },
     neptune: {
         title: "Neptune",
-        description: "Neptune est la planète la plus éloignée du soleil.",
+        description: "Nepture est une géante de glace, elle orbite a environ 4 milliards de kilimètres et effectue une rotation autour du soleil en 165 ans. Un jour sur nepture dur 16h06. sa température est de -214°C ",
         image: "https://images.squarespace-cdn.com/content/v1/5fa5ec79661ee904d2973ca0/dc27d038-8956-4408-88e0-61e3c265f5f5/neptune.png"
     }
 };
@@ -51,4 +50,28 @@ document.querySelectorAll('.planet').forEach(planet => {
         document.getElementById('planet-title').textContent = planetData.title;
         document.getElementById('planet-description').textContent = planetData.description;
     });
+});
+
+// Crée une variable pour le bouton
+const button = document.createElement('a');
+
+// Configure le bouton
+button.href = '../../acceuilsiteweb.html'; // Lien vers la page d'accueil
+button.className = 'home-button'; // Ajoute la classe CSS
+button.title = 'Accueil'; // Titre du bouton
+
+// Ajoute l'icône de maison
+const icon = document.createElement('span');
+icon.className = 'icon';
+icon.textContent = '🏠'; // Emoji de maison
+
+// Ajoute l'icône au bouton
+button.appendChild(icon);
+
+// Ajoute le bouton au corps de la page
+document.body.appendChild(button);
+
+// Ajoute un événement de clic au bouton
+button.addEventListener('click', function(event) {
+    console.log('Bouton Accueil cliqué!');
 });

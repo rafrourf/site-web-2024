@@ -7,37 +7,36 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column; /* Aligner les éléments en colonne */
-    align-items: center; /* Centrer horizontalement */
+    flex-direction: column; 
+    align-items: center;
 }
 
 h1 {
-    margin-bottom: 20px; /* Espacement entre le titre et le conteneur des planètes */
+    margin-bottom: 20px; 
 }
-
 .planets {
     display: flex;
-    justify-content: center; /* Centrer horizontalement */
+    justify-content: center; 
     position: relative;
-    width: 500px; /* Largeur du conteneur des planètes */
-    height: 500px; /* Hauteur du conteneur des planètes */
-    border-radius: 50%; /* Rendre le conteneur circulaire */
-    overflow: hidden; /* Masquer les débordements */
+    width: 500px; 
+    height: 500px; 
+    border-radius: 50%; 
+    overflow: hidden; 
 }
 
 .planet {
-    position: absolute; /* Positionnement absolu pour le placement circulaire */
-    width: 100px; /* Largeur de la planète */
-    height: 100px; /* Hauteur de la planète */
-    border-radius: 50%; /* Rendre les images rondes */
-    overflow: hidden; /* Masquer les débordements */
+    position: absolute; 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    overflow: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    cursor: pointer; 
 }
 
-/* Positionnement des petites photos en cercle avec espacement */
+
 #mercury { top: 10%; left: 50%; transform: translate(-50%, -50%); }
 #venus { top: 30%; left: 80%; transform: translate(-50%, -50%); }
 #earth { top: 50%; left: 90%; transform: translate(-50%, -50%); }
@@ -48,16 +47,47 @@ h1 {
 #neptune { top: 30%; left: 20%; transform: translate(-50%, -50%); }
 
 .planet img {
-    width: 100%; /* Assurez-vous que les images remplissent leur conteneur */
-    height: auto;
+    width: 100%; 
+    height: auto;   
 }
 
 .info-panel {
-    margin-top: 20px; /* Espacement entre le conteneur des planètes et le panneau d'informations */
+    margin-top: 20px; 
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 350px; /* Largeur du panneau d'informations */
-    height: auto; /* Ajuster la hauteur automatiquement */
+    width: 350px; 
+    height: auto;
+}
+
+.home-button {
+    position: absolute; /* Positionnement absolu */
+    top: 20px; /* Distance du haut */
+    left: 20px; /* Distance de la gauche */
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 60px; /* Centre le texte verticalement */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 24px;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.home-button:hover .icon {
+    transform: scale(1.5); /* Agrandit l'icône au survol */
 }
