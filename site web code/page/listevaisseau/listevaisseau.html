@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaisseaux Spatiaux</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="../../acceuilsiteweb.html">Accueil</a>
+            <a href="../liste/liste.html">Planètes</a>
+            <a href="../iss/iss.html">L'ISS</a>
+            <a href="../information sur lespace/espace.html">L'espace</a>
+            <a href="../../sitemap/sitemap.html">Plan du site web</a>
+        </div>
+    </div>
+
+    <span onclick="openNav()" class="openbtn">Ouvrir</span>
+    <h1>Vaisseaux Spatiaux</h1>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('apollo')">Apollo 11</button>
+        <div class="submenu" id="apollo">
+            <div class="submenu-item">La mission Apollo est la première mission qui a permis d'amener des hommes sur la lune et de les ramener sur terre en 1969.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('shuttle')">Space Shuttle</button>
+        <div class="submenu" id="shuttle">
+            <div class="submenu-item">Le Space Shuttle était un vaisseau spatial réutilisable utilisé par la NASA de 1981 à 2011 pour transporter des astronautes et des cargaisons en orbite terrestre. Il a permis de réaliser des missions comme l'assemblage de la Station Spatiale Internationale et des déploiements de satellites.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('voyager')">Voyager 1</button>
+        <div class="submenu" id="voyager">
+            <div class="submenu-item">Voyager 1 est une sonde spatiale lancée par la NASA en 1977 pour explorer les planètes extérieures du système solaire. Elle est devenue l'objet fabriqué par l'homme le plus éloigné de la Terre et continue de transmettre des données depuis l'espace interstellaire.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('iss')">International Space Station (ISS)</button>
+        <div class="submenu" id="iss">
+            <div class="submenu-item">C'est la station spatiale internationale, elle orbite autour de la Terre.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('hubble')">Hubble Space Telescope</button>
+        <div class="submenu" id="hubble">
+            <div class="submenu-item">Le télescope spatial Hubble, lancé en 1990, est un observatoire en orbite autour de la Terre qui fournit des images et des données détaillées sur l'univers, notamment sur les galaxies, les étoiles et les planètes. Il a révolutionné l'astronomie en permettant des observations précises et profondes sans l'interférence de l'atmosphère terrestre.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('curiosity')">Mars Rover (Curiosity)</button>
+        <div class="submenu" id="curiosity">
+            <div class="submenu-item">Les Mars Rovers sont des robots mobiles envoyés sur Mars pour explorer la surface de la planète rouge. Parmi les plus célèbres, il y a Spirit, Opportunity, Curiosity et Perseverance, qui ont collecté des données scientifiques importantes pour comprendre l'histoire géologique et potentiellement la présence de vie sur Mars.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('soyuz')">Soyouz</button>
+        <div class="submenu" id="soyuz">
+            <div class="submenu-item">Vaisseau spatial russe utilisé pour le transport d 'astronautes entre la Terre et l'ISS.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('falcon')">Falcon 9</button>
+        <div class="submenu" id="falcon">
+            <div class="submenu-item">Falcon 9 est une fusée réutilisable pour les missions commerciales habitées. Elle est capable de transporter des charges lourdes en orbite.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('horizons')">New Horizons</button>
+        <div class="submenu" id="horizons">
+            <div class="submenu-item">La mission spatiale New Horizons fait partie d'un projet d'exploration scientifique visant à étudier des objets célestes lointains et à recueillir des données sur l'espace interstellaire.</div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class="toggle-button" onclick="toggleSubMenu('artemis')">Artemis I</button>
+        <div class="submenu" id="artemis">
+            <div class="submenu-item">Mission de la NASA visant à retourner des astronautes sur la Lune dans les années à venir.</div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

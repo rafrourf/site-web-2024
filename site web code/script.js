@@ -34,3 +34,20 @@ function transitionToPage(page) {
         window.location.href = page;
     }, 500); // Doit correspond à la durée de la transition CSS
 }
+
+function transformToRocket() {
+    const button = document.getElementById('rocketButton');
+    button.classList.toggle('active'); // Ajouter ou retirer la classe active
+}
+  
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}

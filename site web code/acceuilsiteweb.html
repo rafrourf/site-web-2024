@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>information sur l'iss</title>
+    <title>Bienvenue sur notre site web</title>
     <link rel="stylesheet" href="./styles.css">
-<style> 
+    <style>
 details {
             display: inline-block; /* Affiche les panneaux horizontalement */
             margin-right: 20px; /* Espace entre les panneaux */
@@ -125,7 +125,9 @@ details {
   transition: margin-left .5s;
   padding: 16px;
 }
-</style>
+
+    </style>
+</head>
 <body>
     
 	<div id="mySidebar" class="sidebar">
@@ -139,43 +141,64 @@ details {
 
 <button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button>
 
-    <header>
-        <h1 style="color:#fff200; background-color: #0032ff; text-align: center;">La station spatiale internationnale (ISS)</h1>
-        <p>sur cette page vous allez retrouver les informations pratique sur l'ISS dont</p>
-			<ul> 
-				<li style="text-align: left;">que veut dire l'anagrame ISS</li>
-				<li style="text-align: left;">a qui appartient l'ISS</li>
-				<li style="text-align: left;">a quoi nous sert l'iss </li>
-				<li style="text-align: left;">live de la terre depuis L'iss et quelque video d'expliquation</li>
-				<li style="text-align: left;">pourquoi on ne touche pas le sol dans l'iss</li>
-    </header>
-
-
-	
-	<h2 id="iss?" style="color: black;"> que veut dire l'anagrame ISS</h2>
-		<p>l'anagramme ISS veut dire en anglais:"international space station" qui signifie en francais "stations spatiale internationnale" elle est en orbite autour de la terre<p>
-		
-
-	<h2 id="issinfo?" style="color: black"> a quoi nous sert la stations spatiale internationnale</h2>
-			<p>la station spatiale internationnale nous sert a:</p>
-				<lu>
-					<li>a faire des expérience et a en savoir plus sur l'espace</li>
-					<li>amérir des fusée pour les voyage vers Mars</li>
-					<li>tester de nouvelle technologie, en effet, certaine technologie sont testée dans l'iss pour limiter les dégat sur le tarre</li>
-					<li>envoie des astronaute dans l'espace</li>
-				</lu>
-	<h2 id="qui?" style="color: black">a qui appartient la station spatiale internationnale</h2>
-				<p>la station spatiale internationnale appartient a tous le monde.</p>
-
-	<h2 id="sol?" style="color: black"> pourquoi ne touche t'on pas le sol dans l'iss.</h2>
-				<p>les astronaute ne touche pas le sol de l'iss car il n'y a pas d'atmosphère, nous somme attiré vers la terre car elle tourne sur elle même tandis que l'iss tourne juste autour de la terre et pas sur elle même.</p>
-
-	<h2 id="video" style="color: black">voici quelque video expliquative et le live de la terre depuis l'iss</h2>
-	<iframe src="http://www.youtube.com/embed/wG4YaEcNlb0" width="400" height="200" frameborder="0" allowfullscreen></iframe>
-	<iframe src="http://www.youtube.com/embed/WDtQBsVlnYE" width="400" height="200" frameborder="0" allowfullscreen></iframe>
-	<iframe src="http://www.youtube.com/embed/gcmA0_CMFlU" width="400" height="200" frameborder="0" allowfullscreen></iframe>
-	<script src="./script.js"></script>
-	<script>
+<h1>bienvenue sur notre site web sur l'espace</h1>
+<br></br>
+<h2 style="background-color: #5533ff; text-align: center; ">sur ce site vous alllez retrouver des information tel que: </h2>
+<br></br>
+    <section id="planetes">
+        <h2>La liste des planètes de notre système solaire</h2>
+        <p>Liste des planètes de notre système solaire et les informations sur chaque planète.</p>
+        <img src="https://c8.alamy.com/compfr/2aktjnj/schema-montrant-les-differentes-planetes-du-systeme-solaire-illustration-2aktjnj.jpg" width="300" height="300" frameborder="0">
+    </section>
+<hr></hr>
+    <section id="iss">
+        <h2>Live sur l'espace depuis l'ISS</h2>
+        <iframe src="http://www.youtube.com/embed/wG4YaEcNlb0" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+    </section>
+<hr></hr>
+    <section id="vaisseau">
+        <h2>La liste des vaisseaux les plus connus qui ont volé</h2>
+        <ul>
+            <li>- Voyager 1</li>
+            <li>- Appolo 11</li>
+            <li>- Soyuz</li>
+            <li>- Ariane 5</li>
+            <li>- Space Ship</li>
+            <li>- Et bien d'autre</li>
+        </ul>
+        <a href="page/liste.html"> 
+            <img src="image/fusée.png" alt="Liens vers la liste des fusées qui ont volé" width="400" height="200">
+        </a>
+    </section>
+<hr></hr>
+    <section id=" infos">
+        <h2>Quelques informations sur lespace</h2>
+        <ul>
+            <li>- Définition de lespace </li>
+            <li>- Quelle est sa taille ?</li>
+            <li>- quelque autre information utile</li>
+        </ul>
+    </section>
+<hr>
+    <section id="issinfo">
+        <h2>quelque information sur l'iss</h2>
+        <lu>
+            <li>quesque l'iss?</li>
+            <li>que veut dire l'anagrame iss?</li>
+            <li>a quoi nous sert l'iss?</li>
+        </lu>
+        <a href="page/iss.html">
+            <img src="https://th.bing.com/th/id/OIP.gwO-nlapd1hUvm8jSUsLbgHaE6?w=247&h=180&c=7&r=0&o=5&pid=1.7" alt="quelque informations sur l'iss" width="400" height="200">
+        </a>
+<hr>
+        <section id="pagesup">
+            <h2>vous aurez également accès a: </h2>
+                <lu>
+                    <li>un plan du site pour pouvoir vous y retrouver si jamais vous êtes perdu. Cette page seras accessible a partir de toute les page de notre site web</li>
+                    <li>une page de contact ou vous pourrez soit nous contacté soi via un formulaire soit par nos réseau sociaux en posant vos question ou en reportant un bug. </li>
+                </lu>
+        </section>
+			<script>
 	function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
@@ -186,5 +209,13 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
   }
 </script>
+   <script src="./script.js"></script>
+	<footer>
+        <p>&copy; 2024-2025 Maxime Rouilly et Raphael Thys</p>
+    </footer>
+    <div>
+        <div class ="enfant"></div>
+        <div class ="adulte"></div>
+    </div>
 </body>
 </html>

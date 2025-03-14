@@ -1,23 +1,19 @@
-// Crée une variable pour le bouton
-const button = document.createElement('a');
-
-// Configure le bouton
-button.href = '../../acceuilsiteweb.html'; // Lien vers la page d'accueil
-button.className = 'home-button'; // Ajoute la classe CSS
-button.title = 'Accueil'; // Titre du bouton
-
-// Ajoute l'icône de maison
-const icon = document.createElement('span');
-icon.className = 'icon';
-icon.textContent = '🏠'; // Emoji de maison
-
-// Ajoute l'icône au bouton
-button.appendChild(icon);
-
-// Ajoute le bouton au corps de la page
-document.body.appendChild(button);
-
-// Ajoute un événement de clic au bouton
-button.addEventListener('click', function(event) {
-    console.log('Bouton Accueil cliqué!');
-});
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
