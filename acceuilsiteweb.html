@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur notre site web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #041576, #337AFF);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #FFFFFF;
+        }
+
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        section img {
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        ul, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .sidebar {
+            background-color: #111;
+            color: #fff;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            font-size: 18px;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .openbtn {
+            background-color: #FFD700;
+            color: #111;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .openbtn:hover {
+            background-color: #FFC107;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #041576;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            section {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="../../acceuilsiteweb.html">Retour à l'accueil</a>
+        <a href=".././listevaisseau/listevaisseau.html">Fusées qui ont pris leur envol</a>
+        <a href="../information sur lespace/espace.html">Informations sur l'espace</a>
+        <a href="../liste/liste.html">Planètes du système solaire</a>
+        <a href="../../sitemap/sitemap.html">Plan du site</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+
+    <h1>Bienvenue sur notre site web sur l'espace</h1>
+
+    <section id="planetes">
+        <h2>La liste des planètes de notre système solaire</h2>
+        <p>Liste des planètes de notre système solaire et les informations sur chaque planète.</p>
+        <img src="https://c8.alamy.com/compfr/2aktjnj/schema-montrant-les-differentes-planetes-du-systeme-solaire-illustration-2aktjnj.jpg" width="300" height="300" alt="Planètes du système solaire">
+    </section>
+
+    <section id="iss">
+        <h2>Live sur l'espace depuis l'ISS</h2>
+        <iframe src="http://www.youtube.com/embed/wG4YaEcNlb0" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="vaisseau">
+        <h2>La liste des vaisseaux les plus connus qui ont volé</h2>
+        <ul>
+            <li>Voyager 1</li>
+            <li>Appolo 11</li>
+            <li>Soyuz</li>
+            <li>Ariane 5</li>
+            <li>Space Ship</li>
+            <li>Et bien d'autres</li>
+        </ul>
+        <a href="page/liste.html">
+            <img src="image/fusée.png" alt="Liens vers la liste des fusées qui ont volé" width="400" height="200">
+        </a>
+    </section>
+
+    <section id="infos">
+        <h2>Quelques informations sur l'espace</h2>
+        <ul>
+            <li>Définition de l'espace</li>
+            <li>Quelle est sa taille ?</li>
+            <li>Quelques autres informations utiles</li>
+        </ul>
+    </section>
+
+    <section id="issinfo">
+        <h2>Quelques informations sur l'ISS</h2>
+        <ul>
+            <li>Qu'est-ce que l'ISS ?</li>
+            <li>Que signifie l'acronyme ISS ?</li>
+            <li>À quoi sert l'ISS ?</li>
+        </ul>
+        <a href="page/iss.html">
+            <img src="https://th.bing.com/th/id/OIP.gwO-nlapd1hUvm8jSUsLbgHaE6?w=247&h=180&c=7&r=0&o=5&pid=1.7" alt="Quelques informations sur l'ISS" width="400" height="200">
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024-2025 Maxime Rouilly et Raphael Thys</p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>
