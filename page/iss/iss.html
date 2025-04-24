@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>information sur l'iss</title>
+    <link rel="stylesheet" href="./styles.css">
+<style> 
+details {
+            display: inline-block; /* Affiche les panneaux horizontalement */
+            margin-right: 20px; /* Espace entre les panneaux */
+        }
+        summary {
+            cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+        }
+        body {
+            background: linear-gradient(to right, #041576, #337AFF);    
+            background-size: cover;
+            color: #fff; /* Couleur du texte par défaut */
+        }
+
+
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+   
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+   
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+   
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+   
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+    }
+   
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+   
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+	
+	.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+</style>
+<body>
+    
+	<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="../../acceuilsiteweb.html">retour a l'acceuil</a>
+  <a href=".././listevaisseau/listevaisseau.html">fusée qui ont pris leur envol</a>
+  <a href="../information sur lespace/espace.html">information sur l'espace</a>
+  <a href="../liste/liste.html">planète du système solaire</a>
+  <a href="../../sitemap/sitemap.html">plan du site</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button>
+
+    <header>
+        <h1 style="color:#fff200; background-color: #0032ff; text-align: center;">La station spatiale internationnale (ISS)</h1>
+        <p>sur cette page vous allez retrouver les informations pratique sur l'ISS dont</p>
+			<ul> 
+				<li style="text-align: left;">que veut dire l'anagrame ISS</li>
+				<li style="text-align: left;">a qui appartient l'ISS</li>
+				<li style="text-align: left;">a quoi nous sert l'iss </li>
+				<li style="text-align: left;">live de la terre depuis L'iss et quelque video d'expliquation</li>
+				<li style="text-align: left;">pourquoi on ne touche pas le sol dans l'iss</li>
+    </header>
+
+
+	
+	<h2 id="iss?" style="color: black;"> que veut dire l'anagrame ISS</h2>
+		<p>l'anagramme ISS veut dire en anglais:"international space station" qui signifie en francais "stations spatiale internationnale" elle est en orbite autour de la terre<p>
+		
+
+	<h2 id="issinfo?" style="color: black"> a quoi nous sert la stations spatiale internationnale</h2>
+			<p>la station spatiale internationnale nous sert a:</p>
+				<lu>
+					<li>a faire des expérience et a en savoir plus sur l'espace</li>
+					<li>amérir des fusée pour les voyage vers Mars</li>
+					<li>tester de nouvelle technologie, en effet, certaine technologie sont testée dans l'iss pour limiter les dégat sur le tarre</li>
+					<li>envoie des astronaute dans l'espace</li>
+				</lu>
+	<h2 id="qui?" style="color: black">a qui appartient la station spatiale internationnale</h2>
+				<p>la station spatiale internationnale appartient a tous le monde.</p>
+
+	<h2 id="sol?" style="color: black"> pourquoi ne touche t'on pas le sol dans l'iss.</h2>
+				<p>les astronaute ne touche pas le sol de l'iss car il n'y a pas d'atmosphère, nous somme attiré vers la terre car elle tourne sur elle même tandis que l'iss tourne juste autour de la terre et pas sur elle même.</p>
+
+	<h2 id="video" style="color: black">voici quelque video expliquative et le live de la terre depuis l'iss</h2>
+	<iframe src="http://www.youtube.com/embed/wG4YaEcNlb0" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+	<iframe src="http://www.youtube.com/embed/WDtQBsVlnYE" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+	<iframe src="http://www.youtube.com/embed/gcmA0_CMFlU" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+	<script src="./script.js"></script>
+	<script>
+	function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  }
+</script>
+</body>
+</html>

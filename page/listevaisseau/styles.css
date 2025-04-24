@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffcc00;
+}
+
+.menu {
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.toggle-button {
+  background-color: #ffcc00;
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: left;
+}
+
+.toggle-button:hover {
+  background-color: #197abd;
+}
+
+.submenu {
+  max-height: 0; /* Initialement caché */
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background-color: #444;
+  border-top: 1px solid #555;
+}
+
+.submenu-item {
+  padding: 15px;
+  border-bottom: 1px solid #555;
+  opacity: 0; /* Initialement invisible */
+  animation: fadeIn 0.5s forwards; /* Animation d'apparition */
+}
+
+.submenu-item:last-child {
+  border-bottom: none;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Commence invisible */
+  }
+  to {
+      opacity: 1; /* Devient visible */
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.overlay-content {
+  position: relative;
+  top: 30px;
+  text-align: left;
+}
+
+.overlay a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}

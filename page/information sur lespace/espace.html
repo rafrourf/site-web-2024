@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur notre site</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #15d9d3, #37908e);
+            background-size: cover;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+		.sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../acceuilsiteweb.html">Accueil du site web</a>
+        <a href="../iss/iss.html">Informations sur l'ISS</a>
+        <a href="../listevaisseau/listevaisseau.html">Fusées qui ont volé</a>
+        <a href="../liste/liste.html">Planètes de notre système solaire</a>
+        <a href="../../sitemap/sitemap.html">Plan du site</a>
+    </div>
+
+    <!-- Open button -->
+    <button class="openbtn" onclick="openNav()">&#9776; Autres pages du site</button>
+
+    <!-- Main content -->
+    <div id="main">
+        <h2 id="intro">Introduction sur ce qu'est l'espace</h2>
+        <h3>L'espace est la vaste étendue qui se trouve au-delà de notre atmosphère, où se trouvent les étoiles, les planètes et les galaxies. C'est un endroit fascinant et mystérieux, rempli de choses incroyables à explorer et à découvrir.</h3>
+
+        <h2>Définition simple de ce qu'est l'espace</h2>
+        <p>L'espace est l'étendue qui sépare les objets célestes comme les planètes, les étoiles et les galaxies.</p>
+
+        <h2>Caractéristiques de l'espace :</h2>
+        <ul>
+            <li><strong>Vide :</strong> Dans l'espace, il n'y a pas d'air, ce qui signifie que les sons ne peuvent pas voyager. C'est pourquoi, dans l'espace, personne ne peut entendre crier.</li>
+            <li><strong>Distance :</strong> L'espace est immense et les distances entre les objets sont très grandes.</li>
+            <li><strong>Rayonnement :</strong> L'espace est rempli de rayonnements, comme les rayons ultraviolets et les rayons X, qui peuvent être dangereux pour les astronautes.</li>
+        </ul>
+
+        <h2 id="observation">Observation de l'espace</h2>
+        <p>Les enfants ou vous pouvez observer l'espace grâce à des télescopes ou à l'œil nu pour voir les étoiles si le ciel est dégagé (sans nuages). Cela rendra l'apprentissage beaucoup plus amusant.</p>
+        <img src="http://autourduciel.blog.lemonde.fr/files/2016/05/Mars-le-20-mai-2016-par-Guillaume-Cannat.jpg" width="50%">
+
+        <h2 id="element">Éléments présents</h2>
+        <p>Bien que l'on pense souvent que l'espace est vide, il contient en réalité des gaz et de la poussière, ainsi que des particules qui se déplacent à grande vitesse.</p>
+        <img src="https://tse4.mm.bing.net/th?id=OIP.OazXrHCePkORZBG4pDWRQwHaE9&pid=Api" width="50%">
+
+        <h2><strong>Conclusion :</strong> L'espace est un domaine d'étude fascinant qui continue d'éveiller la curiosité des scientifiques et des passionnés d'astronomie. Chaque découverte nous rapproche un peu plus de la compréhension de notre univers et de notre place en son sein.</h2>
+    </div>
+	<script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.querySelector(".openbtn").style.display = "none"; // Masquer le bouton
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.querySelector(".openbtn").style.display = "block"; // Réafficher le bouton
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions d'utilisation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Conditions d'utilisation</h1>
+    <p>Bienvenue sur notre site web. En accédant à ce site, vous acceptez les conditions d'utilisation suivantes...</p>
+    <!-- Ajoutez ici le contenu des conditions d'utilisation -->
+    
+    <button id="acceptButton">Accepter</button>
+
+    <script>
+        document.getElementById('acceptButton').onclick = function() {
+            // Enregistrer l'acceptation dans le stockage local
+            localStorage.setItem('termsAccepted', 'true');
+            // Rediriger vers la page d'accueil après avoir accepté
+            window.location.href = "../acceuilsiteweb.html";
+        }
+    </script>
+</body>
+</html>
