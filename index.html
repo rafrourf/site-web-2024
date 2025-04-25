@@ -58,9 +58,16 @@
         }
 
         .sidebar {
-            background-color: #111;
-            color: #fff;
-            padding-top: 60px;
+            height: 100%; /* Full-height */
+            width: 0; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0;
+            left: 0;
+            background-color: #111; /* Black */
+            overflow-x: hidden; /* Disable horizontal scroll */
+            transition: 0.5s; /* Smooth transition effect */
+            padding-top: 60px; /* Place content 60px from the top */
         }
 
         .sidebar a {
@@ -74,6 +81,14 @@
 
         .sidebar a:hover {
             background-color: #575757;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
         }
 
         .openbtn {
@@ -121,11 +136,11 @@
 <body>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="../../acceuilsiteweb.html">Retour à l'accueil</a>
         <a href=".././listevaisseau/listevaisseau.html">Fusées qui ont pris leur envol</a>
-        <a href="../information sur lespace/espace.html">Informations sur l'espace</a>
-        <a href="../liste/liste.html">Planètes du système solaire</a>
-        <a href="../../sitemap/sitemap.html">Plan du site</a>
+        <a href="page/information sur lespace/espace.html">Informations sur l'espace</a>
+        <a href="page/liste/liste.html">Planètes du système solaire</a>
+        <a href="sitemap/sitemap.html">Plan du site</a>
+        <a href="page/listevaisseau/listevaisseau.html">liste des vaisseau spatiaux</a>
     </div>
 
     <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
