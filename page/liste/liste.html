@@ -6,6 +6,23 @@
     <title>Système Solaire</title>
     <link rel="stylesheet" href="./styles.css">
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #041576, #337AFF);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD700;
+            margin: 20px 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
         .sidebar {
             height: 100%;
             width: 0;
@@ -43,19 +60,76 @@
         .openbtn {
             font-size: 20px;
             cursor: pointer;
-            background-color: #111;
-            color: white;
+            background-color: #FFD700;
+            color: #041576;
             padding: 10px 15px;
             border: none;
+            border-radius: 5px;
+            margin: 20px;
+            transition: background-color 0.3s;
         }
 
         .openbtn:hover {
-            background-color: #444;
+            background-color: #FFC107;
         }
 
         #main {
             transition: margin-left .5s;
             padding: 16px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .planets {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .planet {
+            width: 100px; /* Réduction de la largeur */
+            height: 100px; /* Réduction de la hauteur */
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .planet img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .planet:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .info-panel {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info-panel h2 {
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-panel img {
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -63,11 +137,11 @@
     <!-- Sidebar -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../../acceuilsiteweb.html">Accueil</a>
+        <a href="../../index.html">Accueil</a>
         <a href="../iss/iss.html">ISS</a>
-        <a href="../information sur lespace/espace.html">l'espace</a>
-        <a href="../listevaisseau/listevaisseau.html">liste des fusée</a>
-        <a href="../../sitemap/sitemap.html">sitemap</a>
+        <a href="../information sur lespace/espace.html">L'espace</a>
+        <a href="../listevaisseau/listevaisseau.html">Liste des fusées</a>
+        <a href="../../sitemap/sitemap.html">Plan du site</a>
     </div>
 
     <!-- Main content -->

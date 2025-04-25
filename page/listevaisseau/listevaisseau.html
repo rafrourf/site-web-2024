@@ -4,23 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaisseaux Spatiaux</title>
-    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #041576, #337AFF);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD700;
+            margin: 20px 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu {
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .toggle-button {
+            width: 100%;
+            background-color: #041576;
+            color: #FFD700;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px;
+            text-align: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button:hover {
+            background-color: #337AFF;
+        }
+
+        .submenu {
+            display: none;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .submenu-item {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .submenu-item:hover {
+            color: #FFD700;
+        }
+
+        .main-menu {
+            background-color: #041576;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .main-menu a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .main-menu a:hover {
+            color: #FFC107;
+        }
+    </style>
 </head>
 <body>
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-            <a href="../../acceuilsiteweb.html">Accueil</a>
-            <a href="../liste/liste.html">Planètes</a>
-            <a href="../iss/iss.html">L'ISS</a>
-            <a href="../information sur lespace/espace.html">L'espace</a>
-            <a href="../../sitemap/sitemap.html">Plan du site web</a>
-        </div>
+    <!-- Menu principal -->
+    <div class="main-menu">
+        <a href="../../index.html">Accueil</a>
+        <a href="../liste/liste.html">Planètes</a>
+        <a href="../iss/iss.html">L'ISS</a>
+        <a href="../information sur lespace/espace.html">L'espace</a>
+        <a href="../../sitemap/sitemap.html">Plan du site</a>
     </div>
 
-    <span onclick="openNav()" class="openbtn">Ouvrir</span>
     <h1>Vaisseaux Spatiaux</h1>
 
+    <!-- Sous-menus pour les vaisseaux -->
     <div class="menu">
         <button class="toggle-button" onclick="toggleSubMenu('apollo')">Apollo 11</button>
         <div class="submenu" id="apollo">
@@ -52,21 +129,21 @@
     <div class="menu">
         <button class="toggle-button" onclick="toggleSubMenu('hubble')">Hubble Space Telescope</button>
         <div class="submenu" id="hubble">
-            <div class="submenu-item">Le télescope spatial Hubble, lancé en 1990, est un observatoire en orbite autour de la Terre qui fournit des images et des données détaillées sur l'univers, notamment sur les galaxies, les étoiles et les planètes. Il a révolutionné l'astronomie en permettant des observations précises et profondes sans l'interférence de l'atmosphère terrestre.</div>
+            <div class="submenu-item">Le télescope spatial Hubble, lancé en 1990, est un observatoire en orbite autour de la Terre qui fournit des images et des données détaillées sur l'univers, notamment sur les galaxies, les étoiles et les planètes.</div>
         </div>
     </div>
 
     <div class="menu">
         <button class="toggle-button" onclick="toggleSubMenu('curiosity')">Mars Rover (Curiosity)</button>
         <div class="submenu" id="curiosity">
-            <div class="submenu-item">Les Mars Rovers sont des robots mobiles envoyés sur Mars pour explorer la surface de la planète rouge. Parmi les plus célèbres, il y a Spirit, Opportunity, Curiosity et Perseverance, qui ont collecté des données scientifiques importantes pour comprendre l'histoire géologique et potentiellement la présence de vie sur Mars.</div>
+            <div class="submenu-item">Les Mars Rovers sont des robots mobiles envoyés sur Mars pour explorer la surface de la planète rouge. Parmi les plus célèbres, il y a Spirit, Opportunity, Curiosity et Perseverance.</div>
         </div>
     </div>
 
     <div class="menu">
         <button class="toggle-button" onclick="toggleSubMenu('soyuz')">Soyouz</button>
         <div class="submenu" id="soyuz">
-            <div class="submenu-item">Vaisseau spatial russe utilisé pour le transport d 'astronautes entre la Terre et l'ISS.</div>
+            <div class="submenu-item">Vaisseau spatial russe utilisé pour le transport d'astronautes entre la Terre et l'ISS.</div>
         </div>
     </div>
 
@@ -91,6 +168,15 @@
         </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script>
+        function toggleSubMenu(id) {
+            const submenu = document.getElementById(id);
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>

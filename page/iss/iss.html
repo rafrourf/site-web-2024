@@ -1,190 +1,204 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>information sur l'iss</title>
-    <link rel="stylesheet" href="./styles.css">
-<style> 
-details {
-            display: inline-block; /* Affiche les panneaux horizontalement */
-            margin-right: 20px; /* Espace entre les panneaux */
-        }
-        summary {
-            cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
-        }
+    <title>Informations sur l'ISS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
         body {
-            background: linear-gradient(to right, #041576, #337AFF);    
-            background-size: cover;
-            color: #fff; /* Couleur du texte par défaut */
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #041576, #337AFF);
+            color: #fff;
+            margin: 0;
+            padding: 0;
         }
 
+        h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
 
-    body {
-      font-family: 'Lato', sans-serif;
-    }
-   
-    .overlay {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0, 0.9);
-      overflow-x: hidden;
-      transition: 0.5s;
-    }
-   
-    .overlay-content {
-      position: relative;
-      top: 25%;
-      width: 100%;
-      text-align: center;
-      margin-top: 30px;
-    }
-   
-    .overlay a {
-      padding: 8px;
-      text-decoration: none;
-      font-size: 36px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-   
-    .overlay a:hover, .overlay a:focus {
-      color: #f1f1f1;
-    }
-   
-    .overlay .closebtn {
-      position: absolute;
-      top: 20px;
-      right: 45px;
-      font-size: 60px;
-    }
-   
-    @media screen and (max-height: 450px) {
-      .overlay a {font-size: 20px}
-      .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-      }
-    }
-	
-	.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+        h1 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+        h2 {
+            font-size: 1.8rem;
+            color: #FFFFFF;
+        }
 
-.sidebar a:hover {
-  color: #f1f1f1;
-}
+        p, li {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 10px 20px;
+        }
 
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+        ul {
+            list-style: disc;
+            margin: 10px 40px;
+        }
 
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
 
-.openbtn:hover {
-  background-color: #444;
-}
+        .sidebar a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: background-color 0.3s;
+        }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-</style>
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #FFD700;
+            color: #111;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .openbtn:hover {
+            background-color: #FFC107;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #041576;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
 <body>
-    
-	<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="../../acceuilsiteweb.html">retour a l'acceuil</a>
-  <a href=".././listevaisseau/listevaisseau.html">fusée qui ont pris leur envol</a>
-  <a href="../information sur lespace/espace.html">information sur l'espace</a>
-  <a href="../liste/liste.html">planète du système solaire</a>
-  <a href="../../sitemap/sitemap.html">plan du site</a>
-</div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="../../acceuilsiteweb.html">Retour à l'accueil</a>
+        <a href="../listevaisseau/listevaisseau.html">Fusées qui ont pris leur envol</a>
+        <a href="../information sur lespace/espace.html">Informations sur l'espace</a>
+        <a href="../liste/liste.html">Planètes du système solaire</a>
+        <a href="../../sitemap/sitemap.html">Plan du site</a>
+    </div>
 
-<button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button>
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
 
     <header>
-        <h1 style="color:#fff200; background-color: #0032ff; text-align: center;">La station spatiale internationnale (ISS)</h1>
-        <p>sur cette page vous allez retrouver les informations pratique sur l'ISS dont</p>
-			<ul> 
-				<li style="text-align: left;">que veut dire l'anagrame ISS</li>
-				<li style="text-align: left;">a qui appartient l'ISS</li>
-				<li style="text-align: left;">a quoi nous sert l'iss </li>
-				<li style="text-align: left;">live de la terre depuis L'iss et quelque video d'expliquation</li>
-				<li style="text-align: left;">pourquoi on ne touche pas le sol dans l'iss</li>
+        <h1>La Station Spatiale Internationale (ISS)</h1>
+        <p>Sur cette page, vous allez retrouver des informations pratiques sur l'ISS :</p>
+        <ul>
+            <li>Que signifie l'acronyme ISS ?</li>
+            <li>À qui appartient l'ISS ?</li>
+            <li>À quoi sert l'ISS ?</li>
+            <li>Live de la Terre depuis l'ISS et quelques vidéos explicatives</li>
+            <li>Pourquoi on ne touche pas le sol dans l'ISS</li>
+        </ul>
     </header>
 
+    <section>
+        <h2>Que signifie l'acronyme ISS ?</h2>
+        <p>L'acronyme ISS signifie en anglais : "International Space Station", qui se traduit en français par "Station Spatiale Internationale". Elle est en orbite autour de la Terre.</p>
+    </section>
 
-	
-	<h2 id="iss?" style="color: black;"> que veut dire l'anagrame ISS</h2>
-		<p>l'anagramme ISS veut dire en anglais:"international space station" qui signifie en francais "stations spatiale internationnale" elle est en orbite autour de la terre<p>
-		
+    <section>
+        <h2>À quoi sert la Station Spatiale Internationale ?</h2>
+        <p>La Station Spatiale Internationale nous sert à :</p>
+        <ul>
+            <li>Faire des expériences et en savoir plus sur l'espace</li>
+            <li>Amerrir des fusées pour les voyages vers Mars</li>
+            <li>Tester de nouvelles technologies pour limiter les dégâts sur Terre</li>
+            <li>Envoyer des astronautes dans l'espace</li>
+        </ul>
+    </section>
 
-	<h2 id="issinfo?" style="color: black"> a quoi nous sert la stations spatiale internationnale</h2>
-			<p>la station spatiale internationnale nous sert a:</p>
-				<lu>
-					<li>a faire des expérience et a en savoir plus sur l'espace</li>
-					<li>amérir des fusée pour les voyage vers Mars</li>
-					<li>tester de nouvelle technologie, en effet, certaine technologie sont testée dans l'iss pour limiter les dégat sur le tarre</li>
-					<li>envoie des astronaute dans l'espace</li>
-				</lu>
-	<h2 id="qui?" style="color: black">a qui appartient la station spatiale internationnale</h2>
-				<p>la station spatiale internationnale appartient a tous le monde.</p>
+    <section>
+        <h2>À qui appartient la Station Spatiale Internationale ?</h2>
+        <p>La Station Spatiale Internationale appartient à tous les pays participants.</p>
+    </section>
 
-	<h2 id="sol?" style="color: black"> pourquoi ne touche t'on pas le sol dans l'iss.</h2>
-				<p>les astronaute ne touche pas le sol de l'iss car il n'y a pas d'atmosphère, nous somme attiré vers la terre car elle tourne sur elle même tandis que l'iss tourne juste autour de la terre et pas sur elle même.</p>
+    <section>
+        <h2>Pourquoi ne touche-t-on pas le sol dans l'ISS ?</h2>
+        <p>Les astronautes ne touchent pas le sol de l'ISS car il n'y a pas de gravité. L'ISS tourne autour de la Terre, mais pas sur elle-même, ce qui crée une sensation d'apesanteur.</p>
+    </section>
 
-	<h2 id="video" style="color: black">voici quelque video expliquative et le live de la terre depuis l'iss</h2>
-	<iframe src="http://www.youtube.com/embed/wG4YaEcNlb0" width="400" height="200" frameborder="0" allowfullscreen></iframe>
-	<iframe src="http://www.youtube.com/embed/WDtQBsVlnYE" width="400" height="200" frameborder="0" allowfullscreen></iframe>
-	<iframe src="http://www.youtube.com/embed/gcmA0_CMFlU" width="400" height="200" frameborder="0" allowfullscreen></iframe>
-	<script src="./script.js"></script>
-	<script>
-	function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
+    <section>
+        <h2>Vidéos explicatives et live de la Terre depuis l'ISS</h2>
+        <iframe src="http://www.youtube.com/embed/wG4YaEcNlb0" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+        <iframe src="http://www.youtube.com/embed/WDtQBsVlnYE" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+        <iframe src="http://www.youtube.com/embed/gcmA0_CMFlU" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+    </section>
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  }
-</script>
+    <section>
+        <h2>Photo de la Station Spatiale Internationale</h2>
+        <img src="data:image/jpeg;base64,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" 
+             alt="Photo de la Station Spatiale Internationale" 
+             width="600" 
+             height="400" 
+             style="display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <p style="text-align: center;">La Station Spatiale Internationale en orbite autour de la Terre.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024-2025 Maxime Rouilly et Raphael Thys</p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
 </body>
 </html>
