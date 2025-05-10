@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système Solaire</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #041576, #337AFF);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD700;
+            margin: 20px 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #FFD700;
+            color: #041576;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            margin: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .openbtn:hover {
+            background-color: #FFC107;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .planets {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .planet {
+            width: 100px; /* Réduction de la largeur */
+            height: 100px; /* Réduction de la hauteur */
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .planet img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .planet:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .info-panel {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .info-panel h2 {
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-panel img {
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../index.html">Accueil</a>
+        <a href="../iss/iss.html">ISS</a>
+        <a href="../information sur lespace/espace.html">L'espace</a>
+        <a href="../listevaisseau/listevaisseau.html">Liste des fusées</a>
+        <a href="../../sitemap/sitemap.html">Plan du site</a>
+    </div>
+
+    <!-- Main content -->
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Ouvrir le menu</button>
+        <div class="container">
+            <h1>Système Solaire</h1>
+            <div class="planets">
+                <div class="planet" id="mercury">
+                    <img src="https://images.theconversation.com/files/245261/original/file-20181113-194491-1ie3n15.jpg?ixlib=rb-1.1.0&q=30&auto=format&w=754&h=754&fit=crop&dpr=2" alt="Mercure">
+                </div>
+                <div class="planet" id="venus">
+                    <img src="https://www.astronote.fr/wp-content/uploads/2020/04/plan%C3%A8te-V%C3%A9nus-scaled.jpg" alt="Vénus">
+                </div>
+                <div class="planet" id="earth">
+                    <img src="http://www.astrosurf.com/luxorion/Media/terre-landsat8-atlantique-2015.jpg" alt="Terre">
+                </div>
+                <div class="planet" id="mars">
+                    <img src="https://observer.com/wp-content/uploads/sites/2/2020/10/stsci-h-p1829d-m-2000x2000-1.jpg?quality=80&strip" alt="Mars">
+                </div>
+                <div class="planet" id="jupiter">
+                    <img src="https://3.bp.blogspot.com/-JzB2ruOjBOs/WJy8tR_tJSI/AAAAAAAABdA/26gANOQ4Y4IZyMnEGS2L8X-dvhVhGL0ZQCLcB/s1600/jupiter_HD.jpg" alt="Jupiter">
+                </div>
+                <div class="planet" id="saturn">
+                    <img src="https://img.freepik.com/premium-photo/saturn-planet-with-night-view-rising-sun-realistic-view-solar-system-3d-rendering_508524-249.jpg?w=2000" alt="Saturne">
+                </div>
+                <div class="planet" id="uranus">
+                    <img src="https://www.telescopenerd.com/wp-content/uploads/uranus.png" alt="Uranus">
+                </div>
+                <div class="planet" id="neptune">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5fa5ec79661ee904d2973ca0/dc27d038-8956-4408-88e0-61e3c265f5f5/neptune.png" alt="Neptune">
+                </div>
+            </div>
+            <div class="info-panel" id="info-panel">
+                <h2>Informations</h2>
+                <div id="planet-info">
+                    <img id="planet-image" src="" alt="" style="display:none; width: 150px; height: auto;">
+                    <h3 id="planet-title"></h3>
+                    <p id="planet-description">Cliquez sur une planète pour voir les informations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.querySelector(".openbtn").style.display = "none"; // Masquer le bouton
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.querySelector(".openbtn").style.display = "block"; // Réafficher le bouton
+        }
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

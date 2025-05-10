@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur notre site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #fff;
+            background-color: #575757;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .openbtn:hover {
+            background-color: #e68900;
+        }
+
+        #main {
+            transition: margin-left 0.5s;
+            padding: 20px;
+        }
+
+        h2, h3 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+
+        p, ul {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #111;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p, ul {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../acceuilsiteweb.html">Accueil du site web</a>
+        <a href="../iss/iss.html">Informations sur l'ISS</a>
+        <a href="../listevaisseau/listevaisseau.html">Fusées qui ont volé</a>
+        <a href="../liste/liste.html">Planètes de notre système solaire</a>
+        <a href="../../sitemap/sitemap.html">Plan du site</a>
+    </div>
+
+    <!-- Open button -->
+    <button class="openbtn" onclick="openNav()">&#9776; Autres pages du site</button>
+
+    <!-- Main content -->
+    <div id="main">
+        <h2 id="intro">Introduction sur ce qu'est l'espace</h2>
+        <h3>L'espace est la vaste étendue qui se trouve au-delà de notre atmosphère, où se trouvent les étoiles, les planètes et les galaxies. C'est un endroit fascinant et mystérieux, rempli de choses incroyables à explorer et à découvrir.</h3>
+
+        <h2>Définition simple de ce qu'est l'espace</h2>
+        <p>L'espace est l'étendue qui sépare les objets célestes comme les planètes, les étoiles et les galaxies.</p>
+
+        <h2>Caractéristiques de l'espace :</h2>
+        <ul>
+            <li><strong>Vide :</strong> Dans l'espace, il n'y a pas d'air, ce qui signifie que les sons ne peuvent pas voyager. C'est pourquoi, dans l'espace, personne ne peut entendre crier.</li>
+            <li><strong>Distance :</strong> L'espace est immense et les distances entre les objets sont très grandes.</li>
+            <li><strong>Rayonnement :</strong> L'espace est rempli de rayonnements, comme les rayons ultraviolets et les rayons X, qui peuvent être dangereux pour les astronautes.</li>
+        </ul>
+
+        <h2 id="observation">Observation de l'espace</h2>
+        <p>Les enfants ou vous pouvez observer l'espace grâce à des télescopes ou à l'œil nu pour voir les étoiles si le ciel est dégagé (sans nuages). Cela rendra l'apprentissage beaucoup plus amusant.</p>
+        <img src="http://autourduciel.blog.lemonde.fr/files/2016/05/Mars-le-20-mai-2016-par-Guillaume-Cannat.jpg" alt="Observation de Mars">
+
+        <h2 id="element">Éléments présents</h2>
+        <p>Bien que l'on pense souvent que l'espace est vide, il contient en réalité des gaz et de la poussière, ainsi que des particules qui se déplacent à grande vitesse.</p>
+        <img src="https://tse4.mm.bing.net/th?id=OIP.OazXrHCePkORZBG4pDWRQwHaE9&pid=Api" alt="Éléments présents dans l'espace">
+
+        <h2><strong>Conclusion :</strong> L'espace est un domaine d'étude fascinant qui continue d'éveiller la curiosité des scientifiques et des passionnés d'astronomie. Chaque découverte nous rapproche un peu plus de la compréhension de notre univers et de notre place en son sein.</h2>
+    </div>
+
+    <footer>
+        <p>&copy; 2024-2025 Votre Nom</p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.querySelector(".openbtn").style.display = "none";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.querySelector(".openbtn").style.display = "block";
+        }
+    </script>
+</body>
+</html>
