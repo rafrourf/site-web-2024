@@ -59,6 +59,10 @@
             border: none;
             border-radius: 5px;
             transition: background-color 0.3s;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
         }
 
         .openbtn:hover {
@@ -121,6 +125,11 @@
         }
 
         @media screen and (max-width: 768px) {
+            .openbtn {
+                font-size: 18px;
+                padding: 8px 12px;
+            }
+
             h2 {
                 font-size: 1.8rem;
             }
@@ -147,7 +156,7 @@
     </div>
 
     <!-- Open button -->
-    <button class="openbtn" onclick="openNav()">&#9776; Autres pages du site</button>
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
 
     <!-- Main content -->
     <div id="main">

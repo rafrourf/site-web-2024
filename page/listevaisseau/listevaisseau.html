@@ -4,91 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaisseaux Spatiaux</title>
+    <link rel="stylesheet" href="./styles.css">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #041576, #337AFF);
+            background: linear-gradient(to right, #1e3c72, #2a5298);
             color: #fff;
-            line-height: 1.6;
         }
 
         h1 {
             text-align: center;
-            color: #FFD700;
             margin: 20px 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        .menu {
-            margin: 20px auto;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-
-        .toggle-button {
-            width: 100%;
-            background-color: #041576;
-            color: #FFD700;
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: 15px;
-            text-align: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .toggle-button:hover {
-            background-color: #337AFF;
-        }
-
-        .submenu {
-            display: none;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .submenu-item {
-            font-size: 1em;
-            line-height: 1.6;
-        }
-
-        .submenu-item:hover {
-            color: #FFD700;
-        }
-
-        .main-menu {
-            background-color: #041576;
-            padding: 10px;
+        /* Menu de navigation */
+        .nav-menu {
+            background-color: #111;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             text-align: center;
         }
 
-        .main-menu a {
-            color: #FFD700;
+        .nav-menu a {
+            color: #fff;
             text-decoration: none;
-            font-size: 1.2em;
-            margin: 0 15px;
-            transition: color 0.3s;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .main-menu a:hover {
-            color: #FFC107;
+        .nav-menu a:hover {
+            background-color: #fff;
+            color: #111;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .grid-container button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .grid-container button:hover {
+            background-color: #e68900;
+            transform: scale(1.05);
+        }
+
+        /* Modale styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.5s;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            color: #000;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.5s;
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .modal-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Menu principal -->
-    <div class="main-menu">
-        <a href="../../index.html">Accueil</a>
+    <!-- Menu de navigation -->
+    <div class="nav-menu">
+        <a href="../../acceuilsiteweb.html">Accueil</a>
         <a href="../liste/liste.html">Planètes</a>
         <a href="../iss/iss.html">L'ISS</a>
         <a href="../information sur lespace/espace.html">L'espace</a>
@@ -97,84 +154,118 @@
 
     <h1>Vaisseaux Spatiaux</h1>
 
-    <!-- Sous-menus pour les vaisseaux -->
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('apollo')">Apollo 11</button>
-        <div class="submenu" id="apollo">
-            <div class="submenu-item">La mission Apollo est la première mission qui a permis d'amener des hommes sur la lune et de les ramener sur terre en 1969.</div>
+    <div class="grid-container">
+        <button onclick="openModal('apollo')">Apollo 11</button>
+        <button onclick="openModal('shuttle')">Space Shuttle</button>
+        <button onclick="openModal('voyager')">Voyager 1</button>
+        <button onclick="openModal('iss')">ISS</button>
+        <button onclick="openModal('hubble')">Hubble Telescope</button>
+        <button onclick="openModal('curiosity')">Mars Rover</button>
+        <button onclick="openModal('soyuz')">Soyouz</button>
+        <button onclick="openModal('falcon')">Falcon 9</button>
+        <button onclick="openModal('horizons')">New Horizons</button>
+        <button onclick="openModal('artemis')">Artemis I</button>
+    </div>
+
+    <!-- Modales -->
+    <div id="apollo" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('apollo')">&times;</span>
+            <h2>Apollo 11</h2>
+            <p>Apollo 11 est la mission emblématique de la NASA qui a marqué l'histoire en 1969 en permettant à l'humanité de poser le pied sur la Lune pour la première fois. Commandée par Neil Armstrong, avec Buzz Aldrin et Michael Collins, cette mission a démontré la capacité technologique et scientifique des États-Unis pendant la course à l'espace. Armstrong et Aldrin ont passé environ 21 heures sur la surface lunaire, collectant des échantillons et installant des instruments scientifiques. Cette mission reste un symbole de l'exploration humaine et de l'ingéniosité.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('shuttle')">Space Shuttle</button>
-        <div class="submenu" id="shuttle">
-            <div class="submenu-item">Le Space Shuttle était un vaisseau spatial réutilisable utilisé par la NASA de 1981 à 2011 pour transporter des astronautes et des cargaisons en orbite terrestre. Il a permis de réaliser des missions comme l'assemblage de la Station Spatiale Internationale et des déploiements de satellites.</div>
+    <div id="shuttle" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('shuttle')">&times;</span>
+            <h2>Space Shuttle</h2>
+            <p>Le Space Shuttle, ou Navette Spatiale, était un vaisseau spatial réutilisable développé par la NASA. Utilisé de 1981 à 2011, il a permis de transporter des astronautes et des cargaisons en orbite terrestre basse. La navette a joué un rôle clé dans la construction de la Station Spatiale Internationale (ISS), le déploiement de satellites et la réparation du télescope spatial Hubble. Avec ses ailes et sa capacité à atterrir comme un avion, le Space Shuttle a révolutionné l'accès à l'espace, bien qu'il ait également connu des tragédies, comme les accidents de Challenger et Columbia.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('voyager')">Voyager 1</button>
-        <div class="submenu" id="voyager">
-            <div class="submenu-item">Voyager 1 est une sonde spatiale lancée par la NASA en 1977 pour explorer les planètes extérieures du système solaire. Elle est devenue l'objet fabriqué par l'homme le plus éloigné de la Terre et continue de transmettre des données depuis l'espace interstellaire.</div>
+    <div id="voyager" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('voyager')">&times;</span>
+            <h2>Voyager 1</h2>
+            <p>Voyager 1 est une sonde spatiale lancée par la NASA en 1977 pour explorer les planètes extérieures du système solaire. Elle a survolé Jupiter et Saturne, fournissant des images et des données révolutionnaires sur ces planètes et leurs lunes. Aujourd'hui, Voyager 1 est l'objet fabriqué par l'homme le plus éloigné de la Terre, voyageant dans l'espace interstellaire. Elle continue de transmettre des données sur l'environnement au-delà de notre système solaire, offrant des informations précieuses sur l'univers.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('iss')">International Space Station (ISS)</button>
-        <div class="submenu" id="iss">
-            <div class="submenu-item">C'est la station spatiale internationale, elle orbite autour de la Terre.</div>
+    <div id="iss" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('iss')">&times;</span>
+            <h2>International Space Station (ISS)</h2>
+            <p>La Station Spatiale Internationale (ISS) est un laboratoire en orbite autour de la Terre, construit grâce à une collaboration internationale impliquant la NASA, Roscosmos, l'ESA, la JAXA et d'autres agences spatiales. Depuis son lancement en 1998, l'ISS a accueilli des centaines d'astronautes et de scientifiques, permettant des recherches dans des conditions de microgravité. Elle est un symbole de coopération mondiale et un centre d'innovation pour les technologies spatiales et les sciences fondamentales.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('hubble')">Hubble Space Telescope</button>
-        <div class="submenu" id="hubble">
-            <div class="submenu-item">Le télescope spatial Hubble, lancé en 1990, est un observatoire en orbite autour de la Terre qui fournit des images et des données détaillées sur l'univers, notamment sur les galaxies, les étoiles et les planètes.</div>
+    <div id="hubble" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('hubble')">&times;</span>
+            <h2>Hubble Space Telescope</h2>
+            <p>Le télescope spatial Hubble, lancé en 1990, est un observatoire en orbite autour de la Terre qui a révolutionné l'astronomie. Grâce à sa position au-dessus de l'atmosphère terrestre, Hubble a capturé des images d'une clarté inégalée de galaxies, de nébuleuses et d'autres objets célestes. Il a permis des découvertes majeures, comme l'accélération de l'expansion de l'univers et la confirmation de l'existence de trous noirs supermassifs. Hubble reste un outil essentiel pour les astronomes du monde entier.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('curiosity')">Mars Rover (Curiosity)</button>
-        <div class="submenu" id="curiosity">
-            <div class="submenu-item">Les Mars Rovers sont des robots mobiles envoyés sur Mars pour explorer la surface de la planète rouge. Parmi les plus célèbres, il y a Spirit, Opportunity, Curiosity et Perseverance.</div>
+    <div id="curiosity" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('curiosity')">&times;</span>
+            <h2>Mars Rover (Curiosity)</h2>
+            <p>Curiosity est un rover de la NASA qui explore la surface de Mars depuis son atterrissage en 2012. Équipé d'instruments scientifiques avancés, il analyse les roches, le sol et l'atmosphère martienne pour rechercher des signes de conditions habitables dans le passé. Curiosity a découvert des preuves de l'existence d'eau liquide dans l'histoire de Mars, contribuant à notre compréhension de la planète rouge et de son potentiel pour abriter la vie.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('soyuz')">Soyouz</button>
-        <div class="submenu" id="soyuz">
-            <div class="submenu-item">Vaisseau spatial russe utilisé pour le transport d'astronautes entre la Terre et l'ISS.</div>
+    <div id="soyuz" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('soyuz')">&times;</span>
+            <h2>Soyouz</h2>
+            <p>Soyouz est un vaisseau spatial russe utilisé depuis les années 1960 pour transporter des astronautes et des cargaisons vers l'orbite terrestre basse, notamment vers la Station Spatiale Internationale (ISS). Fiable et robuste, Soyouz est un pilier de l'exploration spatiale humaine, jouant un rôle crucial dans les missions habitées et les collaborations internationales.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('falcon')">Falcon 9</button>
-        <div class="submenu" id="falcon">
-            <div class="submenu-item">Falcon 9 est une fusée réutilisable pour les missions commerciales habitées. Elle est capable de transporter des charges lourdes en orbite.</div>
+    <div id="falcon" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('falcon')">&times;</span>
+            <h2>Falcon 9</h2>
+            <p>Falcon 9 est une fusée réutilisable développée par SpaceX, une entreprise privée fondée par Elon Musk. Conçue pour réduire les coûts d'accès à l'espace, Falcon 9 est utilisée pour des missions commerciales, scientifiques et habitées. Elle a joué un rôle clé dans le transport de satellites, de cargaisons pour l'ISS et, plus récemment, d'astronautes dans le cadre du programme Crew Dragon.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('horizons')">New Horizons</button>
-        <div class="submenu" id="horizons">
-            <div class="submenu-item">La mission spatiale New Horizons fait partie d'un projet d'exploration scientifique visant à étudier des objets célestes lointains et à recueillir des données sur l'espace interstellaire.</div>
+    <div id="horizons" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('horizons')">&times;</span>
+            <h2>New Horizons</h2>
+            <p>New Horizons est une mission de la NASA lancée en 2006 pour explorer les confins de notre système solaire. Elle a survolé Pluton en 2015, fournissant des images et des données détaillées de cette planète naine et de ses lunes. New Horizons continue son voyage dans la ceinture de Kuiper, étudiant des objets glacés et collectant des informations sur l'origine de notre système solaire.</p>
         </div>
     </div>
 
-    <div class="menu">
-        <button class="toggle-button" onclick="toggleSubMenu('artemis')">Artemis I</button>
-        <div class="submenu" id="artemis">
-            <div class="submenu-item">Mission de la NASA visant à retourner des astronautes sur la Lune dans les années à venir.</div>
+    <div id="artemis" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('artemis')">&times;</span>
+            <h2>Artemis I</h2>
+            <p>Artemis I est une mission de la NASA visant à préparer le retour des astronautes sur la Lune. Cette mission non habitée teste le vaisseau spatial Orion et le système de lancement Space Launch System (SLS). Artemis I marque le début d'un programme ambitieux pour établir une présence humaine durable sur la Lune et préparer l'exploration de Mars.</p>
         </div>
     </div>
 
     <script>
-        function toggleSubMenu(id) {
-            const submenu = document.getElementById(id);
-            if (submenu.style.display === "block") {
-                submenu.style.display = "none";
-            } else {
-                submenu.style.display = "block";
+        // Fonction pour ouvrir une modale
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        // Fonction pour fermer une modale
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        // Fermer la modale en cliquant en dehors
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target === modals[i]) {
+                    modals[i].style.display = "none";
+                }
             }
         }
     </script>

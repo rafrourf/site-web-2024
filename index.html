@@ -17,7 +17,7 @@
 
         h1, h2 {
             text-align: center;
-            margin: 20px 0;
+            margin: 40px 0; /* Ajout d'un espace supérieur */
         }
 
         h1 {
@@ -58,16 +58,16 @@
         }
 
         .sidebar {
-            height: 100%; /* Full-height */
-            width: 0; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Stay on top */
+            height: 100%;
+            width: 0; /* Fermé par défaut */
+            position: fixed;
+            z-index: 1;
             top: 0;
             left: 0;
-            background-color: #111; /* Black */
-            overflow-x: hidden; /* Disable horizontal scroll */
-            transition: 0.5s; /* Smooth transition effect */
-            padding-top: 60px; /* Place content 60px from the top */
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
         }
 
         .sidebar a {
@@ -81,14 +81,6 @@
 
         .sidebar a:hover {
             background-color: #575757;
-        }
-
-        .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
         }
 
         .openbtn {
@@ -136,11 +128,11 @@
 <body>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="page/listevaisseau/listevaisseau.html">Fusées qui ont pris leur envol</a>
-        <a href="page/information sur lespace/espace.html">Informations sur l'espace</a>
-        <a href="page/liste/liste.html">Planètes du système solaire</a>
-        <a href="page/iss/iss.html">Informations sur l'ISS</a>
-        <a href="sitemap/sitemap.html">Plan du site</a>
+        <a href="./page/iss/iss.html">information sur l'iss</a>
+        <a href="./page/listevaisseau/listevaisseau.html">Fusées qui ont pris leur envol</a>
+        <a href="./page/information sur lespace/espace.html">Informations sur l'espace</a>
+        <a href="./page/liste/liste.html">Planètes du système solaire</a>
+        <a href="./sitemap/sitemap.html">Plan du site</a>
     </div>
 
     <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
@@ -150,12 +142,12 @@
     <section id="planetes">
         <h2>La liste des planètes de notre système solaire</h2>
         <p>Liste des planètes de notre système solaire et les informations sur chaque planète.</p>
-        <img src="https://c8.alamy.com/compfr/2aktjnj/schema-montrant-les-differentes-planetes-du-systeme-solaire-illustration-2aktjnj.jpg" width="300" height="300" alt="Planètes du système solaire" style="border: 5px solid white;">
+        <img src="https://c8.alamy.com/compfr/2aktjnj/schema-montrant-les-differentes-planetes-du-systeme-solaire-illustration-2aktjnj.jpg" width="300" height="300" alt="Planètes du système solaire">
     </section>
 
     <section id="iss">
         <h2>Live sur l'espace depuis l'ISS</h2>
-        <iframe src="http://www.youtube.com/embed/jKHvbJe9c_Y" width="400" height="200" frameborder="0" allowfullscreen></iframe>
+        <iframe src="http://www.youtube.com/embed/wG4YaEcNlb0" width="400" height="200" frameborder="0" allowfullscreen></iframe>
     </section>
 
     <section id="vaisseau">
@@ -169,7 +161,7 @@
             <li>Et bien d'autres</li>
         </ul>
         <a href="page/liste.html">
-            <img src="image/fusée.png" alt="Liens vers la liste des fusées qui ont volé" width="400" height="200">>
+            <img src="image/fusée.png" alt="Liens vers la liste des fusées qui ont volé" width="400" height="200">
         </a>
     </section>
 
@@ -190,7 +182,7 @@
             <li>À quoi sert l'ISS ?</li>
         </ul>
         <a href="page/iss.html">
-            <img src="https://th.bing.com/th/id/OIP.gwO-nlapd1hUvm8jSUsLbgHaE6?w=247&h=180&c=7&r=0&o=5&pid=1.7" alt="Quelques informations sur l'ISS" width="400" height="200" style="border: 5px solid white;">
+            <img src="https://th.bing.com/th/id/OIP.gwO-nlapd1hUvm8jSUsLbgHaE6?w=247&h=180&c=7&r=0&o=5&pid=1.7" alt="Quelques informations sur l'ISS" width="400" height="200">
         </a>
     </section>
 
